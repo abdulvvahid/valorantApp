@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgentDetailFragment">
+
+
+    <ImageView
+        android:id="@+id/agentDetailImageView"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/agentDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/agentDetailImageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:text="Agent NAME"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:id="@+id/agentDetailDescription"
+        android:layout_width="191dp"
+        android:layout_height="131dp"
+        android:layout_toRightOf="@id/agentDetailImageView"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:text="agentDescriptionagentDescriptionagentDescriptionagentDescriptionagentDescriptionagentDescriptionagentDescription"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/agentSkills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/agentDetailImageView"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="437dp" />
+</RelativeLayout>
+</layout>

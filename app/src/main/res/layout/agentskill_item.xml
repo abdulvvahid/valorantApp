@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/skillImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_head"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/skillName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skill Name"
+        android:layout_toEndOf="@id/skillImage"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/skillCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="230dp"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:text="Skill Cost"/>
+
+        <TextView
+            android:id="@+id/skillDescription"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/skillImage"
+            android:text="DenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDenemeDeneme"
+            android:textSize="8sp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

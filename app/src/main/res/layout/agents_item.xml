@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/agentImage"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_head"/>
+        <TextView
+            android:id="@+id/agentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent Name"
+            android:layout_toEndOf="@+id/agentImage"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/agentRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent Role"
+            android:layout_toEndOf="@id/agentImage"
+            android:layout_below="@id/agentName"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/roleImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_weapon" />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/agentDescription"
+            android:layout_width="wrap_content"
+            android:text="Agent Description"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

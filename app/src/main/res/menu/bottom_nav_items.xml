@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tacticsFragment"
+        android:title="Tactics"
+        android:icon="@drawable/ic_tactics"
+        />
+    <item
+        android:id="@+id/agentsFragment"
+        android:title="Agents"
+        android:icon="@drawable/ic_iconvalorant"
+        />
+    <item
+        android:id="@+id/weaponsFragment"
+        android:title="Weapons"
+        android:icon="@drawable/ic_weapon"
+        />
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_bottom"
+    app:startDestination="@id/tacticsFragment">
+    <fragment
+        android:id="@+id/tacticsFragment"
+        android:name="com.example.valoranttactics.TacticsFragment"
+        android:label="fragment_tactics"
+        tools:layout="@layout/fragment_tactics" />
+    <fragment
+        android:id="@+id/agentsFragment"
+        android:name="com.example.valoranttactics.AgentsFragment"
+        android:label="fragment_agents"
+        tools:layout="@layout/fragment_agents" >
+        <action
+            android:id="@+id/action_agentsFragment_to_agentDetailFragment"
+            app:destination="@id/agentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.example.valoranttactics.WeaponsFragment"
+        android:label="fragment_weapons"
+        tools:layout="@layout/fragment_weapons" />
+    <fragment
+        android:id="@+id/agentDetailFragment"
+        android:name="com.example.valoranttactics.AgentDetailFragment"
+        android:label="fragment_agent_detail"
+        tools:layout="@layout/fragment_agent_detail" >
+        <action
+            android:id="@+id/action_agentDetailFragment_to_agentsFragment"
+            app:destination="@id/agentsFragment" />
+        <argument
+            android:name="agentName"
+            app:argType="string" />
+    </fragment>
+</navigation>
