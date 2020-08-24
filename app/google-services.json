@@ -21,7 +21,36 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnLpv2JDcWVtIXiuxEiAs-x4_liFnuCqA,Evfe8GEn33w"
+          "current_key": "AIzaSyBnLpv2JDcWVtIXiuxEiAs-x4_liFnuCqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460497377801-m85bfrrh2gn4udi0cuu7ucsgo6mvbcnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460497377801:android:b7f1134ce148cb793cb6d8",
+        "android_client_info": {
+          "package_name": "com.noor.valoranttactics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460497377801-m85bfrrh2gn4udi0cuu7ucsgo6mvbcnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnLpv2JDcWVtIXiuxEiAs-x4_liFnuCqA"
         }
       ],
       "services": {

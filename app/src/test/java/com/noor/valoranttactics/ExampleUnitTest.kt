@@ -1,4 +1,4 @@
-package com.example.valoranttactics
+package com.noor.valoranttactics
 
 import org.junit.Test
 

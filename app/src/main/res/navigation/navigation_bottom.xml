@@ -6,12 +6,12 @@
     app:startDestination="@id/tacticsFragment">
     <fragment
         android:id="@+id/tacticsFragment"
-        android:name="com.example.valoranttactics.TacticsFragment"
+        android:name="com.noor.valoranttactics.TacticsFragment"
         android:label="fragment_tactics"
         tools:layout="@layout/fragment_tactics" />
     <fragment
         android:id="@+id/agentsFragment"
-        android:name="com.example.valoranttactics.AgentsFragment"
+        android:name="com.noor.valoranttactics.AgentsFragment"
         android:label="fragment_agents"
         tools:layout="@layout/fragment_agents" >
         <action
@@ -20,12 +20,12 @@
     </fragment>
     <fragment
         android:id="@+id/weaponsFragment"
-        android:name="com.example.valoranttactics.WeaponsFragment"
+        android:name="com.noor.valoranttactics.WeaponsFragment"
         android:label="fragment_weapons"
         tools:layout="@layout/fragment_weapons" />
     <fragment
         android:id="@+id/agentDetailFragment"
-        android:name="com.example.valoranttactics.AgentDetailFragment"
+        android:name="com.noor.valoranttactics.AgentDetailFragment"
         android:label="fragment_agent_detail"
         tools:layout="@layout/fragment_agent_detail" >
         <action

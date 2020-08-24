@@ -1,4 +1,4 @@
-package com.example.valoranttactics.model
+package com.noor.valoranttactics.model
 
 class Video(
     val agent : String,

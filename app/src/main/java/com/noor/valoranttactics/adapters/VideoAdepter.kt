@@ -1,21 +1,15 @@
-package com.example.valoranttactics.adapters
+package com.noor.valoranttactics.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.VideoView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.valoranttactics.MainActivity
-import com.example.valoranttactics.R
-import com.example.valoranttactics.model.Video
-import com.example.valoranttactics.service.VideoLinkAdapter
-import com.google.android.youtube.player.YouTubeStandalonePlayer
+import com.noor.valoranttactics.R
+import com.noor.valoranttactics.service.VideoLinkAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.video_item.view.*
-import kotlinx.coroutines.flow.callbackFlow
 
 class VideoAdepter(private val videoAgentArray: ArrayList<String>,
                     private val videoMapArray: ArrayList<String>,

@@ -1,4 +1,4 @@
-package com.example.valoranttactics.adapters
+package com.noor.valoranttactics.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.example.valoranttactics.AgentsFragmentDirections
-import com.example.valoranttactics.R
-import com.example.valoranttactics.model.Agent
+import com.noor.valoranttactics.AgentsFragmentDirections
+import com.noor.valoranttactics.R
+import com.noor.valoranttactics.model.Agent
 import kotlinx.android.synthetic.main.agents_item.view.*
-import kotlinx.android.synthetic.main.fragment_agent_detail.view.*
 
 class AgentAdapter(private val agentList: List<Agent>) : RecyclerView.Adapter<AgentAdapter.AgentViewHolder>() {
 

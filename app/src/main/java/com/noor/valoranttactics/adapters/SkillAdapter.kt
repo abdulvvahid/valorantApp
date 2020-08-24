@@ -1,4 +1,4 @@
-package com.example.valoranttactics.adapters
+package com.noor.valoranttactics.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.valoranttactics.R
-import com.example.valoranttactics.model.Skill
+import com.noor.valoranttactics.R
+import com.noor.valoranttactics.model.Skill
 import kotlinx.android.synthetic.main.agentskill_item.view.*
 
 class SkillAdapter(private val skillList: List<Skill>) : RecyclerView.Adapter<SkillAdapter.skillViewHolder>(){

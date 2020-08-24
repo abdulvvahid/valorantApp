@@ -1,24 +1,31 @@
-package com.example.valoranttactics
+package com.noor.valoranttactics
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.valoranttactics.adapters.AgentAdapter
-import com.example.valoranttactics.databinding.FragmentAgentsBinding
-import com.example.valoranttactics.model.Agent
+import com.noor.valoranttactics.adapters.AgentAdapter
+import com.noor.valoranttactics.databinding.FragmentAgentsBinding
+import com.noor.valoranttactics.model.Agent
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.agents_item.*
 
 class AgentsFragment : Fragment() {
+
+    //ca-app-pub-6820833737096197~8417590699 Admob Id
+    //ca-app-pub-6820833737096197/2540052831 bannerAdId
+    //ca-app-pub-3940256099942544/6300978111 BannerTest Id
+    //ca-app-pub-3940256099942544/1033173712 Inter Test Id
 
     private var bind : FragmentAgentsBinding? = null
     private val binding get() = bind!!
 
     private lateinit var db : FirebaseFirestore
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +38,10 @@ class AgentsFragment : Fragment() {
     ): View? {
         bind = FragmentAgentsBinding.inflate(inflater,container,false)
 
+        MobileAds.initialize(requireContext()) {}
+        mAdView = binding.adView2
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         val exampleList = dumpList(12)
 

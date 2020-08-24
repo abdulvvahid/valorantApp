@@ -49,5 +49,15 @@
         android:layout_marginTop="10dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="437dp" />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6820833737096197/2540052831">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.example.valoranttactics
+package com.noor.valoranttactics
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.valoranttactics.adapters.SkillAdapter
-import com.example.valoranttactics.databinding.FragmentAgentDetailBinding
-import com.example.valoranttactics.model.Agent
-import com.example.valoranttactics.model.AgentDetail
-import com.example.valoranttactics.model.Skill
-import kotlinx.android.synthetic.main.agents_item.*
-import kotlinx.android.synthetic.main.fragment_agent_detail.*
+import com.noor.valoranttactics.adapters.SkillAdapter
+import com.noor.valoranttactics.databinding.FragmentAgentDetailBinding
+import com.noor.valoranttactics.model.Skill
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class AgentDetailFragment : Fragment() {
 
     private var bind : FragmentAgentDetailBinding? = null
     private val binding get() = bind!!
+    lateinit var mAdView : AdView
 
     private var newAgentName : String? = null
     private var newAgentImage : Int? = null
@@ -34,6 +34,10 @@ class AgentDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         bind = FragmentAgentDetailBinding.inflate(inflater,container,false)
+        MobileAds.initialize(requireContext()) {}
+        mAdView = binding.adView4
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
         arguments?.let {
             newAgentName = AgentDetailFragmentArgs.fromBundle(it).agentName
 

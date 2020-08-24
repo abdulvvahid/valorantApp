@@ -1,4 +1,4 @@
-package com.example.valoranttactics.model
+package com.noor.valoranttactics.model
 
 import android.widget.ImageView
 

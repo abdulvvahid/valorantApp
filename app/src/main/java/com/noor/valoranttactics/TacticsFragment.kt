@@ -1,6 +1,5 @@
-package com.example.valoranttactics
+package com.noor.valoranttactics
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,12 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.valoranttactics.adapters.VideoAdepter
-import com.example.valoranttactics.databinding.FragmentTacticsBinding
-import com.example.valoranttactics.service.VideoLinkAdapter
+import com.noor.valoranttactics.adapters.VideoAdepter
+import com.noor.valoranttactics.databinding.FragmentTacticsBinding
+import com.noor.valoranttactics.service.VideoLinkAdapter
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.youtube.player.YouTubeStandalonePlayer
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_tactics.*
@@ -25,6 +27,7 @@ class TacticsFragment : Fragment(),AdapterView.OnItemSelectedListener, VideoLink
     private val binding get() = bind!!
 
     private lateinit var db : FirebaseFirestore
+    lateinit var mAdView : AdView
 
     private var spinAgent : String = "BREACH"
     private var spinMap : String = "Ascent"
@@ -41,7 +44,6 @@ class TacticsFragment : Fragment(),AdapterView.OnItemSelectedListener, VideoLink
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -50,6 +52,11 @@ class TacticsFragment : Fragment(),AdapterView.OnItemSelectedListener, VideoLink
     ): View? {
         bind = FragmentTacticsBinding.inflate(inflater,container,false)
         db = FirebaseFirestore.getInstance()
+
+        MobileAds.initialize(requireContext()) {}
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         val spinnerAgents: Spinner = binding.spinnerAgents
         ArrayAdapter.createFromResource(requireContext(),R.array.agents,R.layout.support_simple_spinner_dropdown_item).also {adapter ->
