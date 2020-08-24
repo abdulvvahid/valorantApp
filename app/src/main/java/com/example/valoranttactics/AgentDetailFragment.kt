@@ -367,6 +367,34 @@ class AgentDetailFragment : Fragment() {
                 }
 
             }
+            "Killjoy" -> {binding.agentDetailImageView.setImageResource(R.drawable.killjoydetailimage)
+                binding.agentDetailDescription.text = "The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them. \n" +
+                        "\n"
+                for (i in 0 until 4){
+                    val item : Skill = when(i%4){
+                        0 -> {
+                            Skill(R.drawable.skillq , "ALARMBOT" , "Cost: 200","EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulnerable. HOLD EQUIP to recall a deployed bot.\n" +
+                                    "\n")
+                        }
+                        1 -> {
+                            Skill(R.drawable.skille , "TURRET" , "Cost: Free","EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.\n" +
+                                    "\n")
+                        }
+                        2 -> {
+                            Skill(R.drawable.skillc , "NANOSWARM" , "Cost: 200","EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.\n" +
+                                    "\n")
+                        }
+                        3 -> {
+                            Skill(R.drawable.skillx , "LOCKDOWN" , "Cost: 7 Points","EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.\n" +
+                                    "\n")
+                        }else -> {
+                            Skill(R.drawable.skillc , "Breach" , "Initiator","asşd")
+                        }
+                    }
+                    agentSkills += item
+                }
+
+            }
 
         }
         return agentSkills

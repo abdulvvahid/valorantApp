@@ -32,7 +32,7 @@ class AgentsFragment : Fragment() {
         bind = FragmentAgentsBinding.inflate(inflater,container,false)
 
 
-        val exampleList = dumpList(11)
+        val exampleList = dumpList(12)
 
 
         binding.agentsRecycler.adapter = AgentAdapter(exampleList)
@@ -52,7 +52,7 @@ class AgentsFragment : Fragment() {
         val list = ArrayList<Agent>()
 
         for(i in 0 until size){
-            val item : Agent = when (i % 11) {
+            val item : Agent = when (i % 12) {
                 0 -> {
                     Agent(R.drawable.breachavatar , "Breach" , "Initiator",R.drawable.initiator)
                 }
@@ -85,6 +85,9 @@ class AgentsFragment : Fragment() {
                 }
                 10 -> {
                     Agent(R.drawable.viperavatar , "Viper" , "Controller",R.drawable.controller)
+                }
+                11 -> {
+                    Agent(R.drawable.killjoyavatar , "Killjoy" , "Sentinel",R.drawable.sentinel)
                 }
                 else -> {
                     Agent(R.drawable.viperavatar , "Viper" , "Controller",R.drawable.controller)

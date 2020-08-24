@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/agentDetailImageView"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:text="Agent NAME"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="240dp"
