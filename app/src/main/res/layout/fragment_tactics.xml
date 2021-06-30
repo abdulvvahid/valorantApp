@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TacticsFragment"
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
@@ -106,7 +105,7 @@
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="SMART_BANNER"
